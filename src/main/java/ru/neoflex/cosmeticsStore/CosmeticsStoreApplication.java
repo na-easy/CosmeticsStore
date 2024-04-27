@@ -1,4 +1,4 @@
-package com.neoflex.CosmeticsStore;
+package ru.neoflex.cosmeticsStore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
