@@ -1,6 +1,15 @@
 package ru.neoflex.cosmeticsStore.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+
 
 @Entity
 @Table(name = "order_item")
@@ -12,11 +21,11 @@ public class OrderItems {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "order_id", referencedColumnName = "order_id")
+    @JoinColumn(name = "order_id")
     private Orders orders;
 
     @OneToOne
-    @JoinColumn(name = "product_id", referencedColumnName = "product_id")
+    @JoinColumn(name = "product_id")
     private Products products;
 
     @Column(name = "quantity")
@@ -25,7 +34,7 @@ public class OrderItems {
     @Column(name = "subtotal")
     private Integer subtotal;
 
-    public OrderItems () {
+    public OrderItems() {
     }
 
     public Long getId() {
@@ -71,11 +80,11 @@ public class OrderItems {
     @Override
     public String toString() {
         return "OrderItems{" +
-                "id=" + id +
-                ", orders='" + orders + '\'' +
-                ", products=" + products + '\'' +
-                ", quantity=" + quantity + '\'' +
-                ", subtotal=" + subtotal +
-                '}';
+            "id=" + id +
+            ", orders='" + orders + '\'' +
+            ", products=" + products + '\'' +
+            ", quantity=" + quantity + '\'' +
+            ", subtotal=" + subtotal +
+            '}';
     }
 }
