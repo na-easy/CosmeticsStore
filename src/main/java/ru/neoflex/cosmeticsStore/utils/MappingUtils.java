@@ -1,6 +1,7 @@
 package ru.neoflex.cosmeticsStore.utils;
 
 import org.springframework.stereotype.Service;
+
 import ru.neoflex.cosmeticsStore.dto.*;
 import ru.neoflex.cosmeticsStore.entities.*;
 
@@ -13,7 +14,7 @@ public class MappingUtils {
         dto.setFirstName(entity.getFirstName());
         dto.setLastName(entity.getLastName());
         dto.setEmail(entity.getEmail());
-        dto.setPhone(entity.getPhone());
+        dto.setPhoneNumber(entity.getPhoneNumber());
         return dto;
     }
 
@@ -23,7 +24,7 @@ public class MappingUtils {
         entity.setFirstName(dto.getFirstName());
         entity.setLastName(dto.getLastName());
         entity.setEmail(dto.getEmail());
-        entity.setPhone(dto.getPhone());
+        entity.setPhoneNumber(dto.getPhoneNumber());
         return entity;
     }
 
@@ -117,7 +118,7 @@ public class MappingUtils {
         entity.setProducts(dto.getProducts());
         entity.setCustomers(dto.getCustomers());
         entity.setRating(dto.getRating());
-        entity.setRating(dto.getRating());
+        entity.setComment(dto.getComment());
         return entity;
     }
 }

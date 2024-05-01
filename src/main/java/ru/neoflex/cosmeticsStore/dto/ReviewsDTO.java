@@ -1,8 +1,13 @@
 package ru.neoflex.cosmeticsStore.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import ru.neoflex.cosmeticsStore.entities.Customers;
 import ru.neoflex.cosmeticsStore.entities.Products;
 
+@Setter
+@Getter
 public class ReviewsDTO {
 
     private Long id;
@@ -14,43 +19,4 @@ public class ReviewsDTO {
     public ReviewsDTO () {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public Products getProducts() {
-        return products;
-    }
-
-    public Customers getCustomers() {
-        return customers;
-    }
-
-    public Integer getRating() {
-        return rating;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setProducts(Products products) {
-        this.products = products;
-    }
-
-    public void setCustomers(Customers customers) {
-        this.customers = customers;
-    }
-
-    public void setRating(Integer rating) {
-        this.rating = rating;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
 }

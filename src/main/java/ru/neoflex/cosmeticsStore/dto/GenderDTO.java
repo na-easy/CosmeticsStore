@@ -1,5 +1,10 @@
 package ru.neoflex.cosmeticsStore.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class GenderDTO {
 
     private Long id;
@@ -8,19 +13,4 @@ public class GenderDTO {
     public GenderDTO () {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

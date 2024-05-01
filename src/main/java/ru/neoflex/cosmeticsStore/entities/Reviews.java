@@ -9,6 +9,11 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 @Entity
 @Table(name = "reviews")
 public class Reviews {
@@ -33,46 +38,6 @@ public class Reviews {
     private String comment;
 
     public Reviews () {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public Products getProducts() {
-        return products;
-    }
-
-    public Customers getCustomers() {
-        return customers;
-    }
-
-    public Integer getRating() {
-        return rating;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setProducts(Products products) {
-        this.products = products;
-    }
-
-    public void setCustomers(Customers customers) {
-        this.customers = customers;
-    }
-
-    public void setRating(Integer rating) {
-        this.rating = rating;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
     }
 
     public String toString() {

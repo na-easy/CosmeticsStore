@@ -9,8 +9,11 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
+import lombok.Getter;
+import lombok.Setter;
 
-
+@Setter
+@Getter
 @Entity
 @Table(name = "order_item")
 public class OrderItems {
@@ -35,46 +38,6 @@ public class OrderItems {
     private Integer subtotal;
 
     public OrderItems() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public Orders getOrders() {
-        return orders;
-    }
-
-    public Products getProducts() {
-        return products;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public Integer getSubtotal() {
-        return subtotal;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setOrders(Orders orders) {
-        this.orders = orders;
-    }
-
-    public void setProducts(Products products) {
-        this.products = products;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
-
-    public void setSubtotal(Integer subtotal) {
-        this.subtotal = subtotal;
     }
 
     @Override

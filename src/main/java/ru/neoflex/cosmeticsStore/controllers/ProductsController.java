@@ -1,6 +1,6 @@
 package ru.neoflex.cosmeticsStore.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import ru.neoflex.cosmeticsStore.dto.ProductsDTO;
@@ -12,17 +12,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/products")
 public class ProductsController {
 
     private final ProductsService productsService;
     private final MappingUtils mappingUtils;
-
-    @Autowired
-    public ProductsController(ProductsService productsService, MappingUtils mappingUtils) {
-        this.productsService = productsService;
-        this.mappingUtils = mappingUtils;
-    }
 
     @GetMapping
     public List<ProductsDTO> getAllProducts() {

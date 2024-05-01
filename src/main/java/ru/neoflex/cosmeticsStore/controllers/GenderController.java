@@ -1,6 +1,6 @@
 package ru.neoflex.cosmeticsStore.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import ru.neoflex.cosmeticsStore.dto.GenderDTO;
@@ -11,17 +11,12 @@ import ru.neoflex.cosmeticsStore.utils.MappingUtils;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/gender")
 public class GenderController {
 
     private final GenderService genderService;
     private final MappingUtils mappingUtils;
-
-    @Autowired
-    public GenderController(GenderService genderService, MappingUtils mappingUtils) {
-        this.genderService = genderService;
-        this.mappingUtils = mappingUtils;
-    }
 
     @GetMapping
     public List<Gender> getAllGender() {
