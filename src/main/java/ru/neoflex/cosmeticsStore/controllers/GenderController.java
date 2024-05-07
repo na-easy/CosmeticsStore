@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.neoflex.cosmeticsStore.dto.GenderDTO;
 import ru.neoflex.cosmeticsStore.entities.Gender;
 import ru.neoflex.cosmeticsStore.services.GenderService;
-import ru.neoflex.cosmeticsStore.utils.MappingUtils;
+import ru.neoflex.cosmeticsStore.utils.mapping.GenderMapping;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class GenderController {
 
     private final GenderService genderService;
-    private final MappingUtils mappingUtils;
+    private final GenderMapping mappingUtils;
 
     @GetMapping
     public List<Gender> getAllGender() {

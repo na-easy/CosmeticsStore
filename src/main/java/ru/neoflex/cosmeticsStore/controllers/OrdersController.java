@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.neoflex.cosmeticsStore.dto.OrdersDTO;
 import ru.neoflex.cosmeticsStore.entities.Orders;
 import ru.neoflex.cosmeticsStore.services.OrdersService;
-import ru.neoflex.cosmeticsStore.utils.MappingUtils;
+import ru.neoflex.cosmeticsStore.utils.mapping.OrdersMapping;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class OrdersController {
 
     private final OrdersService ordersService;
-    private final MappingUtils mappingUtils;
+    private final OrdersMapping mappingUtils;
 
     @GetMapping
     public List<OrdersDTO> getAllOrders() {

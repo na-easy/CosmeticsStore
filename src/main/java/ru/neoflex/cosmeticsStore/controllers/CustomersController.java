@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.neoflex.cosmeticsStore.dto.CustomersDTO;
 import ru.neoflex.cosmeticsStore.entities.Customers;
 import ru.neoflex.cosmeticsStore.services.CustomersService;
-import ru.neoflex.cosmeticsStore.utils.MappingUtils;
+import ru.neoflex.cosmeticsStore.utils.mapping.CustomersMapping;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class CustomersController {
 
     private final CustomersService customersService;
-    private final MappingUtils mappingUtils;
+    private final CustomersMapping mappingUtils;
 
     @GetMapping
     public List<CustomersDTO> getAllCustomers() {
