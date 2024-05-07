@@ -1,5 +1,6 @@
 package ru.neoflex.cosmeticsStore.services.impl;
 
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.neoflex.cosmeticsStore.entities.OrderItems;
 import ru.neoflex.cosmeticsStore.repository.OrderItemsRepository;
@@ -7,6 +8,7 @@ import ru.neoflex.cosmeticsStore.services.OrderItemsService;
 
 import java.util.List;
 
+@Service
 public class OrderItemsServiceImpl implements OrderItemsService {
 
     private final OrderItemsRepository orderItemsRepository;

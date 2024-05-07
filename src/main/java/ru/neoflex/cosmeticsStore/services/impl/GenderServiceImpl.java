@@ -1,5 +1,6 @@
 package ru.neoflex.cosmeticsStore.services.impl;
 
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.neoflex.cosmeticsStore.entities.Gender;
 import ru.neoflex.cosmeticsStore.repository.GenderRepository;
@@ -7,6 +8,7 @@ import ru.neoflex.cosmeticsStore.services.GenderService;
 
 import java.util.List;
 
+@Service
 public class GenderServiceImpl implements GenderService {
 
     private final GenderRepository genderRepository;

@@ -1,11 +1,9 @@
 package ru.neoflex.cosmeticsStore.services;
 
 import ru.neoflex.cosmeticsStore.entities.Reviews;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface ReviewsService {
 
     public List<Reviews> getAllReviews();
