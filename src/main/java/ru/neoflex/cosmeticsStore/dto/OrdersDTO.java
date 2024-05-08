@@ -15,7 +15,4 @@ public class OrdersDTO {
     private Integer totalAmount;
     private String status;
 
-    public OrdersDTO () {
-    }
-
 }

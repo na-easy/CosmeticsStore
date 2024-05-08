@@ -13,7 +13,4 @@ public class CustomersDTO {
     String email;
     String phoneNumber;
 
-    public CustomersDTO() {
-    }
-
 }

@@ -11,7 +11,9 @@ import jakarta.persistence.GenerationType;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 @Setter
 @Getter
 @Entity
@@ -36,16 +38,4 @@ public class Orders {
     @Column(name = "status")
     private String status;
 
-    public Orders () {
-    }
-
-    public String toString() {
-        return "Orders{" +
-                "id=" + id +
-                ", customers='" + customers + '\'' +
-                ", orderDate=" + orderDate + '\'' +
-                ", totalAmount=" + totalAmount + '\'' +
-                ", status=" + status +
-                '}';
-    }
 }

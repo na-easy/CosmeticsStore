@@ -13,7 +13,4 @@ public class ProductsDTO {
     private Integer price;
     private Integer quantity;
 
-    public ProductsDTO () {
-    }
-
 }

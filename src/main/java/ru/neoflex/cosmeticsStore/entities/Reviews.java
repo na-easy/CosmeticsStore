@@ -11,7 +11,9 @@ import jakarta.persistence.GenerationType;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 @Setter
 @Getter
 @Entity
@@ -37,16 +39,4 @@ public class Reviews {
     @Column(name = "comment")
     private String comment;
 
-    public Reviews () {
-    }
-
-    public String toString() {
-        return "Reviews{" +
-                "id=" + id +
-                ", products='" + products + '\'' +
-                ", customers=" + customers + '\'' +
-                ", rating=" + rating + '\'' +
-                ", comment=" + comment +
-                '}';
-    }
 }

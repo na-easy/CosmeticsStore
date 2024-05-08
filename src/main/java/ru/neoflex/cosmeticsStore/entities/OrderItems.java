@@ -11,7 +11,9 @@ import jakarta.persistence.GenerationType;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 @Setter
 @Getter
 @Entity
@@ -37,17 +39,4 @@ public class OrderItems {
     @Column(name = "subtotal")
     private Integer subtotal;
 
-    public OrderItems() {
-    }
-
-    @Override
-    public String toString() {
-        return "OrderItems{" +
-            "id=" + id +
-            ", orders='" + orders + '\'' +
-            ", products=" + products + '\'' +
-            ", quantity=" + quantity + '\'' +
-            ", subtotal=" + subtotal +
-            '}';
-    }
 }

@@ -9,7 +9,9 @@ import jakarta.persistence.GenerationType;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 @Setter
 @Getter
 @Entity
@@ -24,14 +26,4 @@ public class Gender {
     @Column(name = "description")
     private String description;
 
-    public Gender () {
-    }
-
-    @Override
-    public String toString() {
-        return "Gender{" +
-                "id=" + id +
-                ", description='" + description +
-                '}';
-    }
 }

@@ -9,7 +9,9 @@ import jakarta.persistence.GenerationType;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 @Setter
 @Getter
 @Entity
@@ -33,17 +35,4 @@ public class Customers {
     @Column(name = "phoneNumber")
     private String phoneNumber;
 
-    public Customers () {
-    }
-
-    @Override
-    public String toString() {
-        return "Customers{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName=" + lastName + '\'' +
-                ", email=" + email + '\'' +
-                ", phoneNumber=" + phoneNumber +
-                '}';
-    }
 }

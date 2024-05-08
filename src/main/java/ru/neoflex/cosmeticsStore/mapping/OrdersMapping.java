@@ -1,4 +1,4 @@
-package ru.neoflex.cosmeticsStore.utils.mapping;
+package ru.neoflex.cosmeticsStore.mapping;
 
 import org.mapstruct.Mapper;
 import ru.neoflex.cosmeticsStore.dto.OrdersDTO;

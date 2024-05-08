@@ -16,7 +16,4 @@ public class ReviewsDTO {
     private Integer rating;
     private String comment;
 
-    public ReviewsDTO () {
-    }
-
 }

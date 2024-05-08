@@ -1,15 +1,22 @@
 package ru.neoflex.cosmeticsStore.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import ru.neoflex.cosmeticsStore.dto.ProductsDTO;
 import ru.neoflex.cosmeticsStore.entities.Products;
 import ru.neoflex.cosmeticsStore.services.ProductsService;
-import ru.neoflex.cosmeticsStore.utils.mapping.ProductsMapping;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,29 +24,26 @@ import java.util.stream.Collectors;
 public class ProductsController {
 
     private final ProductsService productsService;
-    private final ProductsMapping mappingUtils;
 
     @GetMapping
     public List<ProductsDTO> getAllProducts() {
-        return productsService.getAllProducts().stream()
-                .map(mappingUtils::mapToProductsDto)
-                .collect(Collectors.toList());
+        return productsService.getAllProducts();
     }
 
     @GetMapping("/{id}")
     public ProductsDTO getProductsById(@PathVariable Long id) {
-        return mappingUtils.mapToProductsDto(productsService.getProductsById(id));
+        return productsService.getProductsById(id);
     }
 
     @PostMapping
     public Products createProducts(@RequestBody ProductsDTO products) {
-        return productsService.createProducts(mappingUtils.mapToProductsEntity(products));
+        return productsService.createProducts(products);
     }
 
     @PutMapping("/{id}")
     public Products updateProducts(@PathVariable Long id, @RequestParam ProductsDTO products) {
         products.setId(id);
-        return productsService.updateProducts(mappingUtils.mapToProductsEntity(products));
+        return productsService.updateProducts(products);
     }
 
     @DeleteMapping("/{id}")

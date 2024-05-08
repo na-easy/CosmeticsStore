@@ -16,7 +16,4 @@ public class OrderItemsDTO {
     private Integer quantity;
     private Integer subtotal;
 
-    public OrderItemsDTO () {
-    }
-
 }

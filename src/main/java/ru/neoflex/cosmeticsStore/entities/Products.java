@@ -9,7 +9,9 @@ import jakarta.persistence.GenerationType;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
+@ToString
 @Setter
 @Getter
 @Entity
@@ -32,16 +34,4 @@ public class Products {
     @Column(name = "quantity")
     private Integer quantity;
 
-    public Products () {
-    }
-
-    public String toString() {
-        return "Products{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", brand=" + brand + '\'' +
-                ", price=" + price + '\'' +
-                ", quantity=" + quantity +
-                '}';
-    }
 }

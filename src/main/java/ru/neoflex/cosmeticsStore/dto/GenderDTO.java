@@ -10,7 +10,4 @@ public class GenderDTO {
     private Long id;
     private String description;
 
-    public GenderDTO () {
-    }
-
 }
