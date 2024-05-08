@@ -1,4 +1,4 @@
-package com.neoflex.CosmeticsStore;
+package ru.neoflex.cosmeticsStore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
